@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capitulo 2</title>
+    <!--el archivo esta en linea-->
+    <script src="https://www.cadif1.com/js/ga-track-code.js"></script>
+    <!--el archivo esta descargado (no descargado. Ejemplo ↓↓↓)-->
+    <!-- <script src="js/ga-track-code.js"></script> -->
+</head>
+<body>
+    <h1>Agregando codigo</h1>
+    <noscript>Debe habilitar la ejecucion de JavaScript</noscript>
+    <script>
+        //codigo JavaScript. Comentario de linea
+        console.warn("Este codigo JS esta dentro del body")
+        console.log("Console log")
+        console.error("ERROR")
+    </script>
+    <script>
+        "use strict" //← activa el modo estricto
+        var nombre="pedro";
+        var sueldo=2000;
+        const SUELDO_MINIMO=350 //declarar constantes en mayus (buena practica)
+
+        //mostrar valores en consola
+        console.log(nombre)
+        console.log(sueldo)
+    </script>
+    <script src="js/clase1.js">
+        cosole.log("Este mensaje no se vera (scrip ↑ esta citando un archivo)")
+    </script>
+
+</body>
+</html>
