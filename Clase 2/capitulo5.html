@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores de interpolacion</title>
+</head>
+<body>
+    <h1>Clase 2</h1>
+    <script>
+        "use strict"
+        // Math.floor(Math.random()*(max-min)+min)
+
+        var nombre = prompt("Introduzca el nombre: ");
+        if (nombre == "")
+            alert("No ingreso un nombre. Se cancela el proceso")
+        else
+            if (nombre == null)
+                alert("Hizo click en cancelar. Se cancela la operacion")
+            else
+                {
+                var monto = Math.floor(Math.random()*(500-100)+100);
+                var contador = 0;
+                var montoIva;   //El valor inicial es undefined
+                var edad = Math.floor(Math.random()*(70-10)+10);
+
+                // parseFloat para cambiar el tipo (a Float en este caso)
+
+                var precio1 = parseFloat(prompt("Precio del producto 1:"));
+                var precio2 = parseFloat(prompt("Precio del producto 2:"));
+                var precio3 = Math.random()*101;
+
+                var promedio = (precio1+precio2+precio3)/3;
+
+                alert(`El nombre es: ${nombre}`);
+
+                console.log(promedio.toFixed(2))
+
+                console.log(`El nombre del cliente es ${nombre}`)
+                console.log(`El monto a pagar es ${monto}$`)
+
+                contador++;     //incrementa en 1 el valor de la varible
+
+                monto += 100;
+                monto += montoIva;  //Se le suma a monto el valor de  montoIva
+
+                console.log(`El numero de clientes es ${contador}`)
+                console.log(`El monto aumentado es ${monto}$`)
+                }
+    </script>
+</body>
+</html>
