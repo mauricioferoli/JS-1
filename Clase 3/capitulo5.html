@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores de interpolacion</title>
+</head>
+
+<body>
+    <h1>Clase 3</h1>
+    <script>
+        "use strict"
+        // Math.floor(Math.random()*(max-min)+min)
+        // Else usa {} si contiene dos o mas instruciones
+        do {
+            var nombre = prompt("Introduzca el nombre: ");
+            if (nombre == null)
+                alert("Hizo click en cancelar. Se cancela la operacion")
+            else
+                if (nombre.trim().lenght == 0)
+                    alert("No ingreso un nombre. Se cancela el proceso")
+                else
+                    if (!isNaN(nombre)) // ! se esta usando como negacion
+                        alert(`El nombre no puede ser un numero`)
+                    else {
+                        alert(`Su nombre es ${nombre}`)
+
+                        var monto = Math.floor(Math.random() * (500 - 100) + 100);
+                        var contador = 0;
+                        var montoIva;   //El valor inicial es undefined
+                        var edad = Math.floor(Math.random() * (70 - 10) + 10);
+
+                        // parseFloat para cambiar el tipo (a Float en este caso)
+
+                        var precio1 = parseFloat(prompt("Precio del producto 1:"));
+                        if (isNaN(precio1))
+                            alert("No escribio el precio o escribio el numero invalido. " + "Se cancela la operacion")
+                        else {
+                            var precio2 = parseFloat(prompt("Precio del producto 2:"));
+                            if (isNaN(precio2))
+                                alert("No escribio el precio o escribio el numero invalido. " + "Se cancela la operacion")
+                            else {
+                                var precio3 = parseFloat(prompt("Precio del producto 3:"));
+                                if (isNaN(precio3))
+                                    alert("No escribio el precio o escribio el numero invalido. " + "Se cancela la operacion")
+                                else {
+                                    var total = precio1 + precio2 + precio3;
+
+                                    var promedio = total / 3;
+
+                                    alert(`El nombre es: ${nombre}`);
+
+                                    alert(`Producto 1: ${precio1}$\nProducto 2: ${precio2}$\nProducto 3: ${precio3}$`)
+
+                                    console.log(promedio.toFixed(2))
+
+                                    var porcDescuento = promedio >= 100 ? 0.10 : 0;
+                                    var descuento = (precio1 + precio2 + precio3) * porcDescuento;
+                                    var montoPagar = total - descuento;
+
+                                    console.log(`El nombre del cliente es ${nombre}`)
+                                    console.log(descuento == 0 ? "No le toca descuento" : `El descuento es de ${descuento}$`)
+                                    console.log(`El monto a pagar es ${montoPagar}$`)
+
+                                    contador++;     //incrementa en 1 el valor de la varible
+
+                                    monto += 100;
+                                    monto += montoIva;  //Se le suma a monto el valor de  montoIva
+
+                                    console.log(`El numero de clientes es ${contador}`)
+                                    console.log(`El monto aumentado es ${monto}$`)
+                                }
+                            }
+                        }
+                    }
+        } while (confirm("Desea procesar otra factura?")); //confirm es una funcion. Retorna False si el usuario selecciona cancelar...
+        alert("Hasta la vista...")
+    </script>
+</body>
+
+</html>

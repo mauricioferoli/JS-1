@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condicionales parte 2</title>
+</head>
+<body>
+    <h1>Practicando condicionales</h1>
+    <script>
+        anterior = -1;
+        estado = -1;
+        for (i=1;i<=5;i++){
+            while (estado == anterior)
+                estado = Math.floor(Math.random()*4)
+
+            anterior = estado
+            switch (estado){
+                case 0:
+                    mensaje = "Por ver"
+                    break
+                case 1:
+                    mensaje = "Vista"
+                    break
+                case 2:
+                    mensaje = "En marcha"
+                    break
+                case 3:
+                    mensaje = "Suspendida"
+                    break
+                default:
+                    mensaje = "Desconocido"
+            }
+            console.log(`clase ${mensaje}`)
+            alert(`clase ${mensaje}`)
+        }
+    </script>   
+</body>
+</html>
