@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 4</title>
+</head>
+<body>
+    <script>
+        "use strict"
+        
+        var meses = ["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"]
+
+        var favoritos = []
+        
+        do{
+            var repetir = true;
+            do{
+                var mes = prompt("Intoduzca el mes que le gustaria viajar:")
+                var existeMes = meses.includes(mes)
+
+                if (!existeMes)
+                    alert(`El mes ${mes} no existe`)
+                else
+                    if (favoritos.includes(mes))
+                        alert("Este mes ya fue seleccionado anteriormente")
+                    else
+                        repetir=false
+            }while(repetir)
+            favoritos.push(mes)
+        }while(confirm("Le gustaria vaijar otro mes?"))
+        alert(`Los meses seleccionados fueron: ${favoritos}`)
+
+        var diasSemana = ["LUNES", "MARTES", "MIERCOLES", "JUEVES", "VIERNES", "SABADO", "DOMINGO"]
+
+        do{
+            var dia = prompt("Introduzca el dia de la semana:")
+            var existe = diasSemana.includes(dia.toUpperCase())
+            if (!existe)
+                alert(`El dia de la semana ${dia} no existe`)
+        }while(!existe)
+
+    </script>
+</body>
+</html>

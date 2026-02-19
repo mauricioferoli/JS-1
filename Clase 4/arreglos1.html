@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 4</title>
+</head>
+
+<body>
+    <script>
+        "use strict"
+        var diasSemana = ["Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado", "Domingo"]
+
+        console.log(`El primer dia de la semana es ${diasSemana[0]}`)
+        console.log("Los dias del fin de semana son:")
+        for (var i=4;i<7;i++)
+            console.log(diasSemana[i])
+
+        //Este while es equivalente al for anterior
+    /*    i=5;
+        while (i<7){
+            console.log(diasSemana[i])
+            i++
+        }   */
+        var meses = ["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"]
+
+        for (var trimestre=1;trimestre<=4;trimestre++){
+            console.log(`Los meses del trimestre ${trimestre} son:`)
+            var mesInicial = (trimestre-1)*3
+            var mesFinal = trimestre*3-1
+            for (var i=mesInicial;i<mesFinal;i++)
+                console.log(meses[i])
+        }
+
+    </script>
+</body>
+
+</html>
